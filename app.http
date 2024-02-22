@@ -1,0 +1,59 @@
+POST http://localhost:3001/register
+Content-Type:application/json
+
+{
+    "username":"jyothisha",
+    "password":"jyo456"
+}
+
+###
+POST http://localhost:3001/login
+Content-Type:application/json
+Authorization: BEARER SECRET_TOKEN
+{
+    "username":"jyo",
+    "password":"jyo456"
+}
+
+
+###
+GET http://localhost:3001/
+Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5byIsImlhdCI6MTcwODYyMTA0N30.vyW6Kiv9xfJ2YUqH4T8NhSwxou6R5n6H6R9v1Ea2vkQ
+
+
+###
+POST http://localhost:3001/courier/
+Content-Type: application/json
+Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5byIsImlhdCI6MTcwODYyMTA0N30.vyW6Kiv9xfJ2YUqH4T8NhSwxou6R5n6H6R9v1Ea2vkQ
+
+{
+    "TrackingNumber": "TPK123456789",
+    "SenderName": "Rajesh",
+    "SenderAddress": "123 Main St, Anytown",
+    "RecipientName":"Priya Patel",
+    "RecipientAddress": "456 Elm St, Othercity",
+    "PackageDescription": "Small Box",
+    "Status": "In Transit",
+    "LastUpdated": "2024-02-21 10:30:00"
+}
+
+###
+PUT http://localhost:3001/courier/:courierId
+Content-Type: application/json
+Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5byIsImlhdCI6MTcwODYyMTA0N30.vyW6Kiv9xfJ2YUqH4T8NhSwxou6R5n6H6R9v1Ea2vkQ
+
+
+{
+    "TrackingNumber": "TFK123456789",
+    "SenderName": "Rajesh R Nandi U",
+    "SenderAddress": "124 Main St, Anytown",
+    "RecipientName":"Priya Patel",
+    "RecipientAddress": "456 Elm St, Othercity",
+    "PackageDescription": "Small Box",
+    "Status": "In Transit",
+    "LastUpdated": "2024-02-21 10:30:00"
+}
+
+###
+DELETE http://localhost:3001/courier/:courierId
+Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5byIsImlhdCI6MTcwODYyMTA0N30.vyW6Kiv9xfJ2YUqH4T8NhSwxou6R5n6H6R9v1Ea2vkQ
