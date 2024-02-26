@@ -18,13 +18,12 @@ Authorization: BEARER SECRET_TOKEN
 
 ###
 GET http://localhost:3001/
-Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5byIsImlhdCI6MTcwODYyMTA0N30.vyW6Kiv9xfJ2YUqH4T8NhSwxou6R5n6H6R9v1Ea2vkQ
-
+Authorization: BEARER SECRET_TOKEN
 
 ###
 POST http://localhost:3001/courier/
 Content-Type: application/json
-Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5byIsImlhdCI6MTcwODYyMTA0N30.vyW6Kiv9xfJ2YUqH4T8NhSwxou6R5n6H6R9v1Ea2vkQ
+Authorization: BEARER SECRET_TOKEN
 
 {
     "TrackingNumber": "TPK123456789",
@@ -40,7 +39,7 @@ Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5b
 ###
 PUT http://localhost:3001/courier/:courierId
 Content-Type: application/json
-Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5byIsImlhdCI6MTcwODYyMTA0N30.vyW6Kiv9xfJ2YUqH4T8NhSwxou6R5n6H6R9v1Ea2vkQ
+Authorization: BEARER SECRET_TOKEN
 
 
 {
@@ -56,4 +55,4 @@ Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5b
 
 ###
 DELETE http://localhost:3001/courier/:courierId
-Authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp5byIsImlhdCI6MTcwODYyMTA0N30.vyW6Kiv9xfJ2YUqH4T8NhSwxou6R5n6H6R9v1Ea2vkQ
+Authorization: BEARER SECRET_TOKEN
